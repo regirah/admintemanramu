@@ -1,0 +1,812 @@
+:root{
+    --hijautua:	#317256;
+    --hijautuaBanget : #1B4D3E;
+    --first-color:	#fdfdff;
+    --second-color: #acdda3;
+    --third-color : #ddf1da;
+    --forth-color :	#eef8ec;
+    --bayangan : rgba(0, 0, 0, 0.1);
+    --hitam : #0e1111;
+    --abu : #bfbfbf;
+    --coklat-satu:#774a29;
+    --coklat-dua:#c1a37e;
+    --coklat-tiga:#e4e0d5;
+    --biru-brand: #1B56FD;
+    --merah:#C5172E;
+    --merahtua:#A31D1D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ISI */
+.shop-products {
+    display: flex;
+    justify-content: space-between;
+    padding:  50px;
+    
+}
+
+/* Sidebar untuk kategori dan filter */
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.sidebar img{
+    width: 9rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar a{
+  text-decoration: none;
+  color: var(--coklat-satu);
+}
+
+.sidebar a:hover{
+  text-decoration: none;
+  color: var(--hijautua);
+}
+.sidebar ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/* Container Informasi */
+.product-container {
+    width: 76%; /* Memberikan lebih banyak ruang untuk produk */
+}
+
+/* headerrrrr */
+header{
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.product-search-container {
+    width: 50%;
+    display: flex;
+}
+.product-search-bar {
+    padding: 6px 10px;
+    font-size: 16px;
+    border: 1px solid var(--hijautua);
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 100%;  
+}
+
+.product-search-container .search-btn {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--first-color);
+}
+
+
+.search-btn img{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.search-btn:hover {
+    background-color: var(--forth-color);
+}
+
+/* Isi Profil*/
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+
+/* Dropdown Button */
+.dd-profile .dropdown{
+    display: flex;
+    margin-left: 25rem;
+}
+.dropdown-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    
+}
+
+.dropdown-btn img{
+    width: 30px;
+}
+
+/* Dropdown Profil */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Mengatur agar dropdown berada tepat di bawah tombol */
+    left: 0; /* Posisi horizontal */
+    background-color: var(--third-color);
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: var(--hijautua);
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+
+}
+
+.dropdown-content a:hover {
+    background-color: var(--hijautua);
+    color: var(--first-color);
+    border-radius: 5px;
+}
+
+/* Menampilkan dropdown ketika aktif */
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+
+/* overview */
+.overview-grid{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+.ov-ulasan{
+    background-color: var(--coklat-tiga);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.ov-ulasan h4{
+    font-weight: bold;
+}
+
+.ov-tanheb{
+    background-color: var(--coklat-tiga);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.ov-tanheb h4{
+    font-weight: bold;
+}
+
+.ov-produkherbal{
+    background-color: var(--coklat-tiga);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.ov-produkherbal h4{
+    font-weight: bold;
+}
+
+
+/* grafik dll */
+.admin-dashboard {
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.top-categories p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.top-categories button{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: var(--hijautua);
+}
+
+.top-categories, .recent-reviews, .statistics {
+    margin-bottom: 2rem;
+}
+
+.recent-reviews p{
+     font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.top-categories ul {
+    list-style: none;
+}
+
+.top-categories li {
+    padding: 3px 0;
+    font-size: 1.2rem;
+}
+
+/* recent ulasan */
+.ulasan-masuk h4{
+    font-weight: bold;
+}
+/* Styling untuk tabel */
+.review-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.review-table th, .review-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.review-table th {
+    background-color: var(--coklat-tiga);
+    font-weight: bold;
+    color: #333;
+}
+
+.review-table td {
+    color: #555;
+}
+
+.review-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.review-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.review-table td:last-child {
+    max-width: 300px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.statistics {
+    display: flex;
+    gap: 1rem;
+}
+
+.stat-item {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.stat-item p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+canvas {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+/* pindah konten */
+.content-section {
+    display: none;
+}
+
+#overview, #informasiTanheb, #ulasanPengguna, #produkHerbal {
+    display: none;
+}
+
+#overview.active, #informasiTanheb.active, #ulasan.active, #produkHerbal.active {
+    display: block;
+}
+
+/* ISI KONTEN TANHEB */
+.judul-informasi {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+.tambah-info-btn {
+    background-color: var(--coklat-satu);
+    color: var(--coklat-tiga);
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+}
+
+.tambah-info-btn a {
+    text-decoration: none; /* Menghapus garis bawah */
+    color: inherit;  /* Menjadikan warna teks sama dengan tombol */
+}
+
+.judul-informasi h4 {
+    font-weight: bold;
+}
+.info-tanheb {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* membuat 5 kolom */
+    gap: 2rem; /* jarak antar box */
+    width: 100%; 
+    height: 100%;
+    margin: 0 auto; /*supaya di tengah*/
+    border-radius: 5%;
+}
+
+
+.info-tanheb .isi-tanheb {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-tanheb .isi-tanheb img {
+    height: 50%;
+    width: 100%;
+    border-radius: 5%;
+    margin-bottom: .5rem;
+}
+
+.isi-tanheb button{
+    background-color: transparent;
+    border: none;
+    border-radius: 5%;
+   
+}
+
+.info-tanheb .isi-tanheb p:hover{
+    color: var(--coklat-satu);
+    border: none;
+}
+
+
+.info-tanheb .isi-tanheb p{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--hijautua);
+    text-transform: capitalize;
+    margin-top: 5px;
+}
+
+.info-tanheb .isi-tanheb:hover .judultanheb{
+    display: flex;
+}
+
+/* Info Ulasan */
+.keterangan-ulasan img{
+    width: 2rem;
+    height: 2rem;
+ 
+}
+
+.keterangan-ulasan button{
+    background-color: transparent;
+    border: none;
+}
+
+/* riwayat ulasan */
+.header-riwayat-ulasan{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-riwayat-ulasan h4{
+    font-weight: bold;
+}
+.riwayat-ulasan button{
+    background-color: transparent;
+    border: none;
+}
+
+.riwayat-hapus-ulasan{
+    margin-top: 3rem;
+}
+
+.riwayat-hapus-ulasan h4{
+    font-weight: bold;
+}
+
+/* INFO PRODUK HERBAL */
+
+.grid-produkherbal {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* membuat 5 kolom */
+    gap: 2rem; /* jarak antar box */
+    width: 100%; 
+    height: 100%;
+    margin: 0 auto; /*supaya di tengah*/
+    border-radius: 5%;
+}
+
+
+.grid-produkherbal .isi-produk{
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-produkherbal .isi-produk img {
+    height: 50%;
+    width: 100%;
+    border-radius: 5%;
+    margin-bottom: .5rem;
+}
+
+.grid-produkherbal .isi-produk button {
+    background-color: transparent;  /* Membuat tombol transparan */
+    border: none;  /* Menghapus border tombol */
+    padding: 0;  /* Menghapus padding default tombol */
+    cursor: pointer;  /* Menambahkan pointer saat hover */
+}
+
+.isi-produk h6{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--coklat-satu);
+    text-transform: capitalize;
+}
+
+.isi-produk p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--coklat-satu);
+    text-transform: capitalize;
+}
+
+
+/* TAMBAH INFO TANHEB */
+/* Styling untuk container form */
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Styling untuk grup form (label dan input) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+
+}
+
+.form-container input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 8px;
+    resize: vertical; /* Memungkinkan textarea untuk diubah ukurannya */
+}
+
+/* Styling tombol kirim */
+.form-container .btn-kirim {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color:var(--hijautua);
+    color: var(--first-color);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.form-container .btn-kirim:hover {
+    background-color: var(--hijautuaBanget); 
+}
+
+.form-container .btn-hapus {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color:var(--merah);
+    color: var(--first-color);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .btn-hapus:hover { 
+    background-color:var(--merahtua);
+}
+.form-container a{
+    text-decoration: none;
+}
+
+/* Info edit produk herbal */
+
+.contenttanheb {
+  display: flex;
+  justify-content: left; /* Mengatur elemen-elemen dalam baris */
+  align-items: left;
+  margin: 20px;
+  gap: 2rem;
+}
+
+.contenttanheb img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.contentpenting {
+  display: flex;
+  flex-direction: column; /* Isi konten tetap vertikal */
+}
+
+.contentpenting h5,h6{
+  padding: 2px;
+}
+
+.contentpenting img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contentpenting h5,
+.contentpenting h6 {
+  color: #333;
+}
+
+.contentpenting h5 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contentpenting h6 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.contentpenting strong {
+  color: #000000;
+}
+
+.contentpenting p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 15px;
+}
+
+.dd-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+  transition: all 0.3s ease;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Menyebar konten ke kiri dan kanan */
+  align-items: center; /* Menjaga ikon dan teks tetap pada satu baris */
+}
+
+.dd-button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Konten dropdown */
+.dd-content {
+  display: none;
+  background-color: var(--first-color);
+  min-width: 200px;
+  padding: 5px;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+/* dropdown icon */
+.dd-icon {
+  width: 20px; /* Atur ukuran ikon */
+  height: auto;
+  vertical-align: middle;
+   transition: transform 0.3s ease; /* Menambahkan transisi untuk flip */
+}
+
+.dd-content p {
+  margin: 20px;
+  padding: 50px 0;
+}
+
+/* Menampilkan dropdown ketika diklik */
+.dd-detail.active .dd-content {
+  display: block;
+}
+
+/* Flip ikon saat dropdown aktif */
+.dd-detail.active .dd-icon {
+  transform: rotate(180deg); /* Membalikkan ikon */
+}
+
+/* klik button pada produk herbal */
+/* Menyembunyikan section lihatpherbal secara default */
+#lihatpherbal {
+    display: none;  /* Tidak ditampilkan saat pertama kali */
+}
+
+/* Agar konten dalam .content-section tidak bercampur */
+.content-section {
+    display: none; /* Semua konten dengan .content-section disembunyikan */
+}
+
+/* Menampilkan #lihatpherbal saat tombol diklik */
+#lihatpherbal.active {
+    display: block;  /* Menampilkan section */
+}
+
+/* button edit hapus */
+.edit-hapus{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.edit-hapus button{
+    width: 15rem;
+    height: 3rem;
+    align-content: center;
+    color: var(--coklat-tiga);
+    border: none;
+    border-radius: 5px;
+}
+
+.edit-btn{
+    background-color: var(--hijautua);
+}
+
+.edit-btn:hover{
+    background-color: var(--hijautuaBanget);
+    
+}
+
+.hapus-btn{
+    background-color: var(--merah);
+}
+
+.hapus-btn:hover{
+    background-color: var(--merahtua);
+}
+
+.edit-hapus a{
+    text-decoration: none;
+    color: var(--first-color);
+}
+
+/* untuk tanheb */
+#lihattanheb {
+    display: none; /* Menampilkan section yang sesuai */
+    
+}
+
+#lihattanheb.active {
+    display: block;  /* Menampilkan section */
+}
+
+/* PROFIL PENGGUNA.HTML */
+.isiprofilPengguna{
+  display: flex;
+  flex-direction: column;
+   align-items: flex-start; /* Mengatur elemen agar rata kiri */
+}
+.profilPengguna{
+text-align: left; /* Agar teks di dalam elemen ini rata kiri */
+  margin-top: 7rem;
+  width: 100%;
+}
+
+.nama-profil{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.nama-profil h5{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: left;
+}
+
+.nama-profil button{
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: var(--bayangan);
+  border: none;
+}
+
+
+.nama-profil img{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+}
+
+
+#profil-admin {
+    display: none; /* Sebelumnya tersembunyi */
+    transition: all 0.3s ease;
+}
+
+#profil-admin.active {
+    display: block; /* Menampilkan bagian ini ketika tautan diklik */
+}
+
